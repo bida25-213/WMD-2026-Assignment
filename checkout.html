@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<meta charset="UTF-8">
+		<title>StepUp</title>
+		<link rel="stylesheet" href="#">
+	</head>
+	<body>
+
+ <!--Header Section-->
+	<header>
+		<h1>StepUp</h1> 
+        <input type="text" placeholder="What are you looking for?">
+	</header> 
+        
+      <!--Navigation-->
+	<nav>
+		<a href="index.html">Home</a>
+		<a href="product.html">Product</a>
+		<a href="cart.html">Cart</a>
+		<a href="checkout.html">Checkout</a>
+		<a href="aboutus.html">About Us</a>
+		<a href="contactus.html">Contact Us</a>
+		<a href="feedback.html">Feedback</a>
+	</nav>  
+
+    <main>
+        <h2>Contact Details</h2>
+        <form>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first_name" required>
+            <br><br> 
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last_name" required>
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <br><br>
+
+            <label for="email">Email Address :</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+        <h2>Deliver To</h2>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first_name" required>
+            <br><br>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last_name" required>
+             <br><br>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+             <br><br>
+
+            <label for="address1">Address 1:</label>
+             <input type="text" id="address1" name="address1" required>
+            <br><br>
+
+            <label for="address2">Address 2:</label>
+            <input type="text" id="address2" name="address2">
+            <br><br>
+
+            <label for="city">City/Town:</label>
+            <input type="text" id="city" name="city" required>
+            <br><br>
+
+            <label for="region">Region:</label>
+            <input type="text" id="region" name="region" required>
+            <br><br>
+
+        <h2>Payment</h2>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card_number" 
+                    inputmode="numeric" pattern="[0-9]{13,19}" required>
+            <br><br> 
+            
+            <label for="expiry">Expiry Date:</label>
+            <input type="month" id="expiry" name="expired" required>
+            <br><br>
+
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv"
+                    inputmode="numeric" pattern="[0-9]{3,4}" required>
+            <br><br>
+
+        <h2>Order Summary</h2>
+        <p>Subtotal</p>
+        <p>Delivery</p>
+        <p><strong>Total</strong></p>
+
+        <button type="submit">Place Order</button>
+
+        </form>
+    
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2026 Step Up. All rights reserved.</p>
+    </footer>
+
+    </body>
+</html>
