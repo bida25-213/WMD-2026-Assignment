@@ -1,2 +1,2 @@
 # WMD-2026-Assignment
-This is for my online store Step-Up which sells shoes.
+This is for my booking service website called Glow Wrist.
