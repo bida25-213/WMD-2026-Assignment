@@ -85,7 +85,7 @@ footer {
   margin-top: 4rem;
 }
 
-/* ---- SHARED ---- */
+/* Shared */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
 
 .img-placeholder {
@@ -450,9 +450,7 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* ============================================
-   TOAST
-   ============================================ */
+/* Toast */
 .toast {
   position: fixed;
   bottom: 2rem;
