@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Wrist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a class="nav-logo" href="index.html">GLOW<br>WRIST</a>
+    <ul class="nav-links">
+      <li><a href="index2.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="aboutus2.html">About Us</a></li>
+      <li><a href="contactus2.html">Contact Us</a></li>
+      <li><a href="feedback2.html" class="active">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- FEEDBACK FORM -->
+  <div class="feedback-wrap">
+    <div class="feedback-section">
+      <h2>Feedback</h2>
+      <p class="subheading">Write Your Experience</p>
+
+      <div id="feedback-form">
+        <div class="form-group">
+          <textarea id="f-text" placeholder="Type here…."></textarea>
+        </div>
+        <div class="feedback-note">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          Feedback is submitted anonymously
+        </div>
+        <button class="btn-primary" onclick="submitFeedback()">Submit</button>
+      </div>
+
+      <div class="form-success" id="feedback-success">
+        <div class="check">✔</div>
+        <p><strong>Thank you!</strong><br>Your feedback has been submitted anonymously.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <footer>© 2026 StepUp. All rights reserved.</footer>
+
+  <script>
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    function submitFeedback() {
+      const text = document.getElementById('f-text').value.trim();
+      if (!text) {
+        showToast('Please write something before submitting.');
+        return;
+      }
+      document.getElementById('feedback-form').style.display = 'none';
+      document.getElementById('feedback-success').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

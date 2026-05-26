@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Wrist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a class="nav-logo" href="index.html">GLOW<br>WRIST</a>
+    <ul class="nav-links">
+      <li><a href="index2.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html" class="active">Booking</a></li>
+      <li><a href="aboutus2.html">About Us</a></li>
+      <li><a href="contactus2.html">Contact Us</a></li>
+      <li><a href="feedback2.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- BOOKING FORM -->
+  <div class="booking-wrap">
+    <div class="booking-section">
+      <h2>Book Your Order</h2>
+
+      <div id="booking-form">
+        <div class="form-group">
+          <label for="b-name">Full Name</label>
+          <input type="text" id="b-name" placeholder="Kamogelo Modise" />
+        </div>
+        <div class="form-group">
+          <label for="b-phone">Phone Number</label>
+          <input type="tel" id="b-phone" placeholder="+267 7X XXX XXX" />
+        </div>
+        <div class="form-group">
+          <label for="b-email">Email</label>
+          <input type="email" id="b-email" placeholder="Kamo@gmail.com" />
+        </div>
+        <div class="form-group">
+          <label for="b-colour">Colour / Colours of Choice</label>
+          <input type="text" id="b-colour" placeholder="e.g. Black, Blue, Pink" />
+        </div>
+        <div class="form-group">
+          <label for="b-product">Product</label>
+          <select id="b-product">
+            <option value="">— Select a product —</option>
+            <option>Black and White Name Bracelet - P35</option>
+            <option>Colourful Name Bracelet — P40</option>
+            <option>Glow in the Dark Name Bracelet — P45</option>
+            <option>Single-Colour Bracelet — P30</option>
+            <option>Double-Colour Bracelet — P40</option>
+            <option>Multi-Colour Bracelet — P50</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="b-date">Date</label>
+          <input type="date" id="b-date" />
+        </div>
+        <button class="btn-primary" onclick="submitBooking()">Submit Booking</button>
+      </div>
+
+      <div class="form-success" id="booking-success">
+        <div class="check">✔</div>
+        <p><strong>Booking received!</strong><br>We'll be in touch shortly to confirm your order.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <footer>© 2026 StepUp. All rights reserved.</footer>
+
+  <script>
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    function submitBooking() {
+      const name   = document.getElementById('b-name').value.trim();
+      const phone  = document.getElementById('b-phone').value.trim();
+      const email  = document.getElementById('b-email').value.trim();
+      const colour = document.getElementById('b-colour').value.trim();
+      const product = document.getElementById('b-product').value;
+      const date   = document.getElementById('b-date').value;
+
+      if (!name || !phone || !email || !colour || !product || !date) {
+        showToast('Please fill in all fields.');
+        return;
+      }
+      document.getElementById('booking-form').style.display = 'none';
+      document.getElementById('booking-success').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
